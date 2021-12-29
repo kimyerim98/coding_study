@@ -1,3 +1,4 @@
+//ë…¸ë“œë¦¬ìŠ¤íŠ¸ ë§Œë“¤ê¸°
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
@@ -6,7 +7,7 @@
 typedef struct PD
 {
 	int data;
-	struct PD* next; //À§Ä¡¸¦ ³ªÅ¸³»ÁÖ±â À§ÇÑ °Í. 
+	struct PD* next; //ìœ„ì¹˜ë¥¼ ë‚˜íƒ€ë‚´ì£¼ê¸° ìœ„í•œ ê²ƒ. 
 }PD;
 
 void print(PD* input) {
@@ -21,27 +22,27 @@ void print(PD* input) {
 
 int main()
 {
-	PD* pd = (PD*)malloc(sizeof(PD));  //³ëµå »ý¼º
+	PD* pd = (PD*)malloc(sizeof(PD));  //ë…¸ë“œ ìƒì„±
 	int data2 = 0;
 
 	scanf("%d", &data2);
-	PD* insert1 = (PD*)malloc(sizeof(PD));  //³ëµå1 »ý¼º
-	insert1->data = data2; //³ëµå1¿¡ °ª ³Ö±â
-	pd->next = insert1; //Çìµå¿Í ³ëµå1 ÀÌ¾îÁÖ±â
+	PD* insert1 = (PD*)malloc(sizeof(PD));  //ë…¸ë“œ1 ìƒì„±
+	insert1->data = data2; //ë…¸ë“œ1ì— ê°’ ë„£ê¸°
+	pd->next = insert1; //í—¤ë“œì™€ ë…¸ë“œ1 ì´ì–´ì£¼ê¸°
 
 	scanf("%d", &data2);
-	PD* insert2 = (PD*)malloc(sizeof(PD)); //³ëµå2 »ý¼º
-	insert2->data = data2; //³ëµå2¿¡ °ª ³Ö±â
-	insert1->next = insert2; //³ëµå2¿Í ³ëµå1 ÀÌ¾îÁÖ±â
+	PD* insert2 = (PD*)malloc(sizeof(PD)); //ë…¸ë“œ2 ìƒì„±
+	insert2->data = data2; //ë…¸ë“œ2ì— ê°’ ë„£ê¸°
+	insert1->next = insert2; //ë…¸ë“œ2ì™€ ë…¸ë“œ1 ì´ì–´ì£¼ê¸°
 
 
 	scanf("%d", &data2); 
-	PD* insert3 = (PD*)malloc(sizeof(PD));  //³ëµå3»ý¼º
-	insert3->data = data2;  //³ëµå3¿¡ °ª ³Ö±â
-	insert2->next = insert3; //³ëµå3ÀÌ¶û ³ëµå2 ÀÌ¾îÁÖ±â
+	PD* insert3 = (PD*)malloc(sizeof(PD));  //ë…¸ë“œ3ìƒì„±
+	insert3->data = data2;  //ë…¸ë“œ3ì— ê°’ ë„£ê¸°
+	insert2->next = insert3; //ë…¸ë“œ3ì´ëž‘ ë…¸ë“œ2 ì´ì–´ì£¼ê¸°
 
 
-	insert3->next = NULL;  //³ëµå3 µÚ´Â ºñ¾îÁØ´Ù
+	insert3->next = NULL;  //ë…¸ë“œ3 ë’¤ëŠ” ë¹„ì–´ì¤€ë‹¤
 
 	print(pd);
 
